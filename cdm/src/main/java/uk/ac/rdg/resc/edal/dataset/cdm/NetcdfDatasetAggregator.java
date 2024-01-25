@@ -589,7 +589,7 @@ public class NetcdfDatasetAggregator {
             }
         } else {
             if (dataset != null) {
-                log.warn("Dataset " + dataset.getLocation()
+                log.debug("Dataset " + dataset.getLocation()
                         + " is not in active dataset list but has been asked to be released!  This is not harmful in itself but may indicate a coding error whereby a dataset has been marked to be released from the cache multiple times.");
             }
         }
