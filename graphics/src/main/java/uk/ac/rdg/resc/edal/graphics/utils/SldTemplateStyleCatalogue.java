@@ -392,8 +392,6 @@ public class SldTemplateStyleCatalogue implements StyleCatalogue {
             velocityEngine.addProperty(RuntimeConstants.FILE_RESOURCE_LOADER_PATH,
                     stylesDir.getAbsolutePath());
         } else {
-            log.error("User tried to add a styles directory which was not a directory: "
-                    + stylesDir.getAbsolutePath());
             throw new FileNotFoundException("The path " + stylesDir.getAbsolutePath()
                     + " is not a directory");
         }
