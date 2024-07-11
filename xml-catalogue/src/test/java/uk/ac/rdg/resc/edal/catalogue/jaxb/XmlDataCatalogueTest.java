@@ -32,7 +32,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Collection;
 
-import javax.xml.bind.JAXBException;
+import jakarta.xml.bind.JAXBException;
 
 import uk.ac.rdg.resc.edal.catalogue.DataCatalogue;
 import uk.ac.rdg.resc.edal.dataset.Dataset;
