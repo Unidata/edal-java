@@ -11,7 +11,7 @@
         <relativePath>..</relativePath>
     </parent>
     <properties>
-        <netcdfversion>5.6.0</netcdfversion>
+        <netcdfversion>5.6.1-SNAPSHOT</netcdfversion>
     </properties>
     <artifactId>edal-cdm</artifactId>
     <packaging>jar</packaging>
