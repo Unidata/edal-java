@@ -9,7 +9,7 @@ import uk.ac.rdg.resc.edal.graphics.style.FlatOpacity;
 import uk.ac.rdg.resc.edal.graphics.style.ImageLayer;
 import uk.ac.rdg.resc.edal.graphics.style.MapImage;
 
-import javax.xml.bind.annotation.adapters.XmlAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
