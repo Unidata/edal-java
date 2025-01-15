@@ -1,13 +1,8 @@
 # Unidata fork
 
-This is a lightweight fork of edal-java (version 1.5.0) for use by the Unidata TDS.
-Essentially, there are two changes here:
-
-1. Fix [EPSG Database path on Windows](https://github.com/Unidata/edal-java/commit/d9addb0fc7bf0a563d1451f4c9f5b50a39b10b56)
-2. Use the latest release of netCDF-Java (currently version 5.4.2)
-
-We've added a .1 to the version, and only publish snapshots to the Unidata nexus repository.
-Ideally, we can get these changes upstream, but for now, we'll do this for the TDS 5.0.0 Release.
+This is a lightweight fork of edal-java (version 1.5.3) for use by the Unidata TDS.
+Ideally the changes here are focused on updating dependencies (netCDF-Java being the main one).
+We've added a fourth dot release to the version, and only publish to the Unidata nexus repository.
 
 # Environmental Data Abstraction Layer (EDAL)
 
