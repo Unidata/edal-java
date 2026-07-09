@@ -159,7 +159,6 @@ public class CdmTransformedGrid extends AbstractTransformedGrid {
         final int hcsHash = Objects.hash(xAxis, yAxis);
         if (!bboxCache.containsKey(hcsHash)) {
           // compute the bounding box (can be expensive for large grids)
-          System.out.println("Computing bounding box for grid with hash " + hcsHash);
           double latMin = Double.MAX_VALUE;
           double lonMin = Double.MAX_VALUE;
           double latMax = Double.MIN_VALUE;
@@ -211,7 +210,6 @@ public class CdmTransformedGrid extends AbstractTransformedGrid {
           }
           bboxCache.put(hcsHash, bbox);
         } else {
-          System.out.println("Obtain bounding box for grid with hash " + hcsHash + " from cache");
           bbox = bboxCache.get(hcsHash);
         }
     }
