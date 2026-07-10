@@ -128,6 +128,11 @@ public class GetMapStyleParams {
             URL url;
             try {
                 url = new URL(xmlLoc);
+                String protocol = url.getProtocol();
+                if (!protocol.startsWith("http")) {
+                  throw new EdalException(
+                      "Reading SLD using protocol " + protocol + " is not supported");
+                }
                 InputStream is = url.openStream();
                 StringWriter writer = new StringWriter();
                 IOUtils.copy(is, writer);

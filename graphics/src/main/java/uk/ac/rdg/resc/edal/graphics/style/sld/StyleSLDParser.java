@@ -271,6 +271,8 @@ public class StyleSLDParser {
             SAXException, IOException, IllegalArgumentException {
         DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
         builderFactory.setNamespaceAware(true);
+        builderFactory.setXIncludeAware(false);
+        builderFactory.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
         // Uncomment to turn on schema validation
         // builderFactory.setValidating(true);
         try {
