@@ -41,6 +41,8 @@ import java.util.Set;
 
 import org.apache.commons.io.IOUtils;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import uk.ac.rdg.resc.edal.domain.Extent;
 import uk.ac.rdg.resc.edal.exceptions.EdalException;
 import uk.ac.rdg.resc.edal.graphics.exceptions.EdalLayerNotFoundException;
@@ -79,6 +81,8 @@ public class GetMapStyleParams {
 
     /* true if we are using an XML style specification */
     private MapImage xmlMapImage = null;
+
+   private static final Logger log = LoggerFactory.getLogger(GetMapStyleParams.class);
 
     /**
      * Extract GetMap parameters from the URL, using a {@link WmsCatalogue} to
@@ -138,8 +142,9 @@ public class GetMapStyleParams {
                 IOUtils.copy(is, writer);
                 xmlStyle = writer.toString();
             } catch (IOException e) {
-                throw new EdalException(
-                        "SLD argument specified, but SLD could not be read from URL: " + xmlLoc, e);
+                String partialMsg =  "SLD argument specified, but SLD could not be read";
+                log.warn("{} from the URL: {}", partialMsg, xmlLoc, e);
+                throw new EdalException(partialMsg + ".");
             }
         } else {
             /*
