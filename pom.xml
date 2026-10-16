@@ -9,7 +9,7 @@
     <name>Environmental Data Abstraction Library</name>
 
     <properties>
-        <revision>1.5.3.4-SNAPSHOT</revision>
+        <revision>1.5.3.4</revision>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- Enables auto-insertion of licence in new source code files. 
             Could be extracted to a separate settings file, as per http://mevenide.codehaus.org/m2-site/mevenide2-netbeans/customizations.html -->
