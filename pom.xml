@@ -4,11 +4,12 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>uk.ac.rdg.resc</groupId>
-    <version>1.5.3.4-SNAPSHOT</version>
+    <version>${revision}</version>
     <artifactId>edal</artifactId>
     <name>Environmental Data Abstraction Library</name>
 
     <properties>
+        <revision>1.5.3.5-SNAPSHOT</revision>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- Enables auto-insertion of licence in new source code files. 
             Could be extracted to a separate settings file, as per http://mevenide.codehaus.org/m2-site/mevenide2-netbeans/customizations.html -->
@@ -51,6 +52,31 @@
     </developers>
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <configuration>
+                    <updatePomFile>true</updatePomFile>
+                    <flattenMode>resolveCiFriendliesOnly</flattenMode>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>flatten</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>flatten</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>flatten.clean</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <!-- Sets the source version to Java 11 -->
 			    <groupId>org.apache.maven.plugins</groupId>

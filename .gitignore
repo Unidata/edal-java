@@ -14,8 +14,10 @@ out/
 graphics/dependency-reduced-pom.xml
 /pom-backup.xml
 /pom.xml.bak
+.flattened-pom.xml
 
 # editors
 *.swp
 *.idea
 *.iml
+.junie/
